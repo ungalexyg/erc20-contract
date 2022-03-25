@@ -1,8 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.5.13 <0.9.0;
 
-
-
 /**
  * Contract that gives ownership functionlaity to other contracts
  */
@@ -31,8 +29,10 @@ contract Owned {
 /**
  * Contract that must be owned 
  * 
- * can inherit behavior of other contracts using the keyword "is" 
- * (like extends or traits in OOP) 
+ * - can inherit behavior of other contracts using the keyword "is" (like extends or traits in OOP) 
+ * - contract can inherit few contracts : InheritanceFlow is A,B,C 
+ * - if is A,B,C  has the same methods names, the last one, C overrides the others
+ * - inherit contracts deployed as single contract, not separate one
  */
 contract InheritanceFlow is Owned {
 
@@ -96,3 +96,44 @@ contract InheritanceFlow is Owned {
     }
 
 }
+
+
+/* ------------------------------------------------------
+
+// The super keyword in Solidity gives access to the immediate parent contract from which 
+// the current contract is derived. When having 
+// a contract A with a function f() that derives from B which also has a function f(), 
+// A overrides the f of B. That means that myInstanceOfA.f() will call the version of f that 
+// is implemented inside A itself, the original version implemented inside B is not visible anymore. 
+// The original function f from B (being A's parent) is thus available inside A via super.f(). 
+// Alternatively, one can explicitly specifying the parent of which one wants to call the overridden function 
+// because multiple overriding steps are possible as exemplified in the example below:
+
+contract C {
+  uint u;
+  function f() {
+    u = 1;
+  }
+}
+
+contract B is C {
+  function f() {
+    u = 2;
+  }
+}
+
+contract A is B {
+  function f() {  // will set u to 3
+    u = 3;
+  }
+  function f1() { // will set u to 2
+    super.f();
+  }
+  function f2() { // will set u to 2
+    B.f();
+  }
+  function f3() { // will set u to 1
+    C.f();
+  }
+}
+/* --------------------------------------------------- */
