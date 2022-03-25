@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >=0.5.13 <0.9.0; // !!! handler version just for local vscode
+pragma solidity >=0.5.13 <0.9.0;
 
 /**
  * ExceptionsFlow
