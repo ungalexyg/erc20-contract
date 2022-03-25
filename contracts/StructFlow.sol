@@ -9,6 +9,8 @@ contract StructFlow {
     /**
      * define structs
      * structs are like objects that can be used as an interface that represent an entity
+     * member of struct cannot be a type of the struct itself
+     * in temrs of gas consumptions, it is better to define struct in contract than stand a lone contract object
      */
     struct Payment {
         uint256 amount;

@@ -9,6 +9,9 @@ contract MappingFlow {
     /**
      * define mapping
      * mapping helps to store contract's data in a array-like stracture
+     * mapping are endless and they don't have a "length"̀, arrays do have "length"̀
+     * if you need to define mapping length, you can do so with a separete value
+     * arrays have .length() & .push()
      */
     mapping(uint256 => bool) _myIndexMapping; //mark confirmed index for some logic (bool is false by default)
     mapping(address => bool) _myAddressWhitelist; //mark confirmed addresses for some logic (bool is false by default)
