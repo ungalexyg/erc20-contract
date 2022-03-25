@@ -7,7 +7,7 @@ pragma solidity >=0.5.13 <0.9.0; // !!! handler version just for local vscode
  * each contract get an address, the address functions in a similiar way to "routes",
  * and the actual contract class is like a "controller" with embeded functionality to the blockchain
  */
-contract Functions {
+contract BasicDataStorage {
     /*
      * Contract properties
      *
@@ -33,18 +33,8 @@ contract Functions {
         storeData = x;
     }
 
-    /*
-     * Payable functions
-     *
-     * any function in Solidity with the modifier Payable ensures that the function can send and receive Ether.
-     */
-    function sendMoney() public payable {
-        //msg global object avauilble everywhere in the contract up on request
-        balanceReceived += msg.value; // now the balanceReceived will store the value in the contract and will be avaible in next request
-    }
-
     /* 
-        View functions
+        Public+View functions
     
         * Functions that returns values should be declared with the return and the type    
         * View functions ensure that they will not modify the state. 
@@ -61,11 +51,5 @@ contract Functions {
     */
     function getStoredData() public view returns (uint256) {
         return storeData;
-    }
-
-    function getBalance() public view returns (uint256) {
-        // the contract's address available when using the casting address(this)
-        // which returns the address object that has the bakance property
-        return address(this).balance;
     }
 }
