@@ -1,6 +1,31 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.5.13 <0.9.0;
 
+// you can import libraries and us them as 
+
+/* ---------------------------------------------------------------- */
+// example 1 
+// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+// import "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol";
+
+// contract GLDToken is ERC20, ERC20Detailed {
+//     constructor(uint256 initialSupply) ERC20Detailed("Gold", "GLD", 18) public {
+//         _mint(msg.sender, initialSupply);
+//     }
+// }
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+// example 2
+// import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+// import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol";
+// contract MyMathUtil {
+// 	// using SafeMath;	
+// }
+/* ---------------------------------------------------------------- */
+
+
+
 /**
  * Contract that gives ownership functionlaity to other contracts
  */
