@@ -3,6 +3,12 @@ pragma solidity >=0.5.13 <0.9.0; // !!! handler version just for local vscode
 
 /**
  * Functions Flow
+ *
+ * - Functions visibility
+ * -- public : can be called internally + externally (not from other contracts)
+ * -- external : explicitly defiend for other contracts usage & can be called externally (not for internal)
+ * -- private : only for the contract, not reacble externally or in other contracts (as in OOP)
+ * -- internal: only from contract itself or from drived contracts. can't be invoked transaction (as protected in OOP)
  */
 contract FunctionsFlow {
     /**
