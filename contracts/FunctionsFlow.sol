@@ -3,11 +3,6 @@ pragma solidity >=0.5.13 <0.9.0; // !!! handler version just for local vscode
 
 /**
  * Functions Flow
- *
- * -
- * -
- * -
- * -
  */
 contract FunctionsFlow {
     /**
