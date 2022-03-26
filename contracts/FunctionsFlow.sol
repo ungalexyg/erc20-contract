@@ -30,6 +30,7 @@ contract FunctionsFlow {
     /**
      * View function
      *
+     * promise not to modify the state.
      * a view function interact with a storage-variables (contract's properties)
      * but simply return the properties to view them without other operations like updates
      */
@@ -40,6 +41,7 @@ contract FunctionsFlow {
     /**
      * Pure function
      *
+     * promise not to modify or read from the state.
      * it is a function that does not interact with a storage-variables (contract's properties)
      * it is used only for simple logical ops etc
      */
